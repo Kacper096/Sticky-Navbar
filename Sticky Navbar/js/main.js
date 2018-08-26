@@ -1,12 +1,24 @@
 ﻿// Tutaj umieść kod.
-$(window).on('scroll',function()
+$(document).ready(
+function(){
+    $(window).on('scroll',function()
+                {
+        if($(window).scrollTop())
             {
-    if($(window).scrollTop())
-        {
-            $('nav').addClass('black');
+                $('nav').addClass('black');
+            }
+        else
+            {
+                $('nav').removeClass('black');
+            }
+    })
+    
+    $(".social").on({
+        mouseenter: function(){
+            $(this).animate({left:0+'px'})
+        },
+        mouseleave: function(){
+            $(".social").animate({left:-240+'px'})
         }
-    else
-        {
-            $('nav').removeClass('black');
-        }
+    })
 })
