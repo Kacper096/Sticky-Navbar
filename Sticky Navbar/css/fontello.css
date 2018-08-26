@@ -34,8 +34,6 @@
   font-size:50px;
      padding:10px;
      margin: 6px;
-     color:aliceblue;
-     background-color:rgba(255,69,0,0.8);
      border-radius:10px;
      transform: rotate(90deg);
      float:right;
@@ -79,3 +77,5 @@
 .icon-linkedin:before { content: '\f318'; } /* '' */
 .icon-spotify-circled:before { content: '\f328'; } /* '' */
 .icon-instagram:before { content: '\f32d'; } /* '' */
+
+

@@ -188,3 +188,47 @@ section.sec1
     transform: rotate(90deg);
     
 }
+a{
+    text-decoration: none;
+    color:aliceblue;
+}
+/*Hover Social Min*/
+[class ^="icon"]
+{
+     color:aliceblue;
+     
+}
+a:hover .icon-github-circled-alt2
+{
+    color:blueviolet;
+}
+a:hover .icon-youtube
+{
+    color:rgb(255,0,0);
+}
+a:hover .icon-facebook
+{
+    color:rgb(59,89,152);
+}
+a:hover .icon-twitter-bird
+{
+    color:rgb(29,161,242);
+}
+a:hover .icon-linkedin
+{
+    color:rgb(0,119,181);
+}
+a:hover .icon-spotify-circled
+{
+    color:rgb(30,215,96);
+}
+a:hover .icon-instagram
+{
+    color:#d6249f;
+    
+}
+a:hover .icon-gplus
+{
+    color:rgb(219,68,55);
+    
+}
