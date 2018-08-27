@@ -22,6 +22,8 @@ nav.black
     background-color:rgba(0,0,0,0.7);
     padding:10px 100px;
     height: 100px;
+    box-shadow:0px 2px 10px 1px #E2472F;
+    box-sizing: border-box;
 }
 
 nav img.log
