@@ -69,4 +69,4 @@ const showCount = function()
         }
 }
 
-showCount();
+document.ready(function(){showCount();});
