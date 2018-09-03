@@ -23,23 +23,5 @@ function(){
     })
     
     
-    /*Przełączanie do innej strony*/
-    $(".active").click(function(e){
-        var content = $(".wrapper");
-        const href = $(this).attr('href');
-        $.ajax({
-            url:href,
-            
-            beforeSend:fucntion(){
-            content.empty();
-        },
-            success:function(result){
-            content.html(result);
-        },
-            error:function(){
-                content.html("<p> Przepraszamy, ale strony nie udało się połączyć z serwerem.</p>");
-            }
-        });
-    e.preventDefault();
-    })
+   
 })
