@@ -1,12 +1,13 @@
 function leadingZero(element)
 {
-    
+    "use strict";
     if(element < 10) return element = "0" + element;
     return element;
 }
 
 const showCount = function() 
 {
+    "use strict";
     const currentYear = (new Date).getFullYear();
     const month = 10;
     const day = 16;
@@ -29,9 +30,9 @@ const showCount = function()
     //poniewaz pozniej bedziemy przez to dzielić 
     
     if(daysToDate < 1)
-        daysToDateFix = 1;
+       var daysToDateFix = 1;
     else
-        daysToDateFix = daysToDate;
+        var daysToDateFix = daysToDate;
     
     //ilosc godzin która nam pozostała
     const eHoursToDate = (eDaysToDate % daysToDateFix) * 24; 
@@ -69,4 +70,4 @@ const showCount = function()
         }
 }
 
-document.ready(function(){showCount();});
+showCount();

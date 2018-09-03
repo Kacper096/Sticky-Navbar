@@ -28,15 +28,7 @@
  
   display: inline-block;
   text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  font-size:50px;
-     padding:10px;
-     margin: 6px;
-     border-radius:10px;
-     transform: rotate(90deg);
-     float:right;
+  
   /* opacity: .8; */
  
   /* For safety - reset parent styles, that can break glyph codes*/
@@ -48,7 +40,7 @@
  
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: .2em;
+  
   
   
   /* you can be more comfortable with increased icons size */
