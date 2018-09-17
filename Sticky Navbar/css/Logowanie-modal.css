@@ -1,0 +1,197 @@
+#modal
+{
+    display: none;
+    position: fixed;
+    width:100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding-top:100px;
+    left:0;
+    top:0;
+    overflow: auto;
+    background:rgb(0,0,0); /*Fallback color*/
+    background: rgba(0,0,0,0.4);
+}
+
+.close
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin:5px;
+    padding:5px;
+    color:aliceblue;
+}
+.close:hover
+{
+    cursor: pointer;
+    color:rgba(255,69,0,1);
+}
+#loginbox{
+   
+    width:320px;
+    height: 400px;
+    padding:70px 30px;
+    margin:10px;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,1);
+    border: 1px solid black;
+    border-radius:5px;
+    caret-color: orangered; /*kolor kursora*/
+    
+    box-shadow:0px 3px 20px rgba(1,0,0,0.7);
+}
+#loginbox::before,
+#loginbox::after
+{
+    content:"";
+    position: absolute;
+    left: -2px;
+    top:-2px;
+    width:calc(100% + 4px);
+    height:calc(100% + 4px);
+    border-radius:5px;
+    background: linear-gradient(45deg,#FF7D4D,#FF6A33,#F0F8FF,#FF581A, #FF4500, #F0F8FF,#FF4500,#FF581A,#F0F8FF,#FF6A33, #FF7D4D);
+    z-index: -1;
+    background-size: 400%;
+    animation: border 20s linear infinite;
+}
+@keyframes border
+{
+    0%
+    {
+        background-position:0 0;
+    }
+    50%
+    {
+        background-position:300% 0;
+    }
+    100%
+    {
+        background-position:140% 0;
+    }
+}
+#loginbox::after
+{
+    filter:blur(8px);
+}
+.icon-user
+{
+    position: absolute;
+    padding:0;
+    margin:0;
+    font-size:50px;
+    text-shadow:2px 2px rgba(1,0,0,0.69);
+    width:1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100px;
+    height:100px;
+    top:-50px;
+    color:aliceblue;
+    background-image: linear-gradient(to bottom,aliceblue, rgba(0,0,0,0.9));
+    border-radius:50%;
+    left: calc(50% - 50px);
+    box-shadow: 0px -5px 7px rgba(1,0,0,0.69);
+    
+    
+ 
+}
+
+form legend
+{
+
+    font-size:45px;
+    text-align: center;
+    margin:0;
+    padding: 0;
+    
+    
+    
+}
+
+#loginbox p
+{
+    color:aliceblue;
+    font-weight: bold;
+    line-height: 30px;
+    margin:0;
+    
+}
+
+#loginbox input
+{
+    width:100%;
+    margin-bottom:5%;
+}
+
+#loginbox input[type='text'], input[type='password']
+{
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid grey;
+    border-radius:3px;
+    color:aliceblue;
+    outline:none;
+    transition: .4s ease;
+}
+#loginbox input[type='text']:focus, input[type='password']:focus 
+{
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow:0px 3px 3px orangered;
+    border-radius:3px;
+    color:aliceblue;
+    outline:none;
+}
+
+#loginbox input[type='submit']
+{
+    box-sizing: border-box;
+    border:none;
+    outline:none;
+    height: 50px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    font-size:30px;
+    transition:.4s ease-out;
+    border-radius:5px;
+    color:orangered;
+    background-color: transparent;
+    text-shadow: 0px 2px rgba(250,250,250,0.77);
+    /*font gradient*/
+    /*text-shadow: 2px 2px rgba(1,0,0,0.2);
+      background: -webkit-linear-gradient(aliceblue,silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+    
+}
+
+#loginbox input[type='submit']:hover
+{
+
+    cursor:pointer;
+     box-shadow:0px 4px 5px orangered;
+}
+
+
+#loginbox span a
+{
+    text-decoration:none;
+    color:darkgray;
+    text-align: justify;
+    text-shadow: 2px 2px rgba(1,0,0,0.69);
+    font-size:12px;
+    line-height: 30px;
+    transition:.4s ease;
+}
+
+#loginbox span a:hover
+{
+    text-shadow:1px 1px orangered;
+    color:aliceblue;
+}

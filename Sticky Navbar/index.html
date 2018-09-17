@@ -3,20 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Kacper Matuszek"/>
     <title>Sticky_Navbar</title>
     <link href="css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="css/Logowanie-modal.css" rel="stylesheet" type="text/css"/>
     <link href="css/fontello.css" rel="stylesheet" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <nav>
-            <strong><img class="log" src="images/AMG.png" alt="AMG"  ></strong>
+            <strong>
+                <img class="log" src="images/AMG.png" alt="AMG"  >
+            </strong>
             <ul>
-                <li><span><a href="#">Home</a></span></li>
-                <li><span><a href="#">About</a></span></li>
-                <li><span><a href="#">Contact</a></span></li>
-                <li><span><a class="active" href="login.html">Log In</a></span></li>
+                <li><span><a class="navi" href="#">Home</a></span></li>
+                <li><span><a class="navi" href="#">About</a></span></li>
+                <li><span><a class="navi" href="#">Contact</a></span></li>
+                <li><span><a class="navi" id="login">Log In</a></span></li>
             </ul>
         </nav>
         <div class="social">
@@ -45,7 +50,24 @@
         <footer id="copyright"><i>2018 &copy; Kacper Matuszek.</i></footer>
             </section>
     </div>
+    <!-- Modal Login -->
+    <section id="modal">
+            <div id="loginbox">
+            <span class="close">&times;</span>
+                <form method="post" enctype="multipart/form-data">
+                    <i class="icon-user"></i>
+                    <p>Nickname:</p>
+                        <input placeholder="Enter Nickname" name="usernamer" type="text" maxlength="10" required/> 
+                    <p>Password:</p>
+                        <input placeholder="Enter Password" name="pass" type="password" maxlength="20" required/>
+                        <br/>
+                    <input type="submit" value="Login" /><br/>
+                    <span><a href="#">Did you forget your password ?</a></span><br/>
+                    <span><a href="#">Create an account.</a></span>
+                </form>
+            </div>
+    </section>
     <script src="js/main.js"></script>
     <script src="js/Odliczanie.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/login.js" type="text/javascript"></script>
     </body>

@@ -22,6 +22,14 @@ function(){
         }
     })
     
-    
-   
+    $(".navi",this).on(
+        {
+            click: function(){
+            if( $(".navi").hasClass("active"))
+                {
+                    $(".navi").removeClass("active");
+                }
+            $(this).toggleClass("active");
+        }
+    })
 })
