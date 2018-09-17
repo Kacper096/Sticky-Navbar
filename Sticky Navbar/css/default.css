@@ -205,7 +205,7 @@ a{
     
 }
 /*Hover Social Min*/
-[class ^="icon"]:not(".icon-user")
+[class ^="icon"]
 {
      color:aliceblue;
     text-shadow:2px 2px 4px black;
@@ -219,7 +219,10 @@ a{
     margin-right:.1em;
      
 }
-
+.icon-user
+{
+    transform: rotate(0deg);
+}
 a:hover .icon-github-circled-alt2
 {
     color:blueviolet;
