@@ -8,7 +8,7 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items:center;
     font-family: sans-serif;
     color:aliceblue;
@@ -16,53 +16,28 @@ body{
 
 #loginbox{
    
-    width:320px;
-    height: 400px;
-    padding:70px 30px;
-    margin:10px;
+    width:350px;
+    height: 100vh;
+    padding:50px 30px;
+    margin:0px;
     position: absolute;
     box-sizing: border-box;
     background-color: rgba(0,0,0,0.7);
     border: 1px solid black;
     border-radius:5px;
-    caret-color: orangered; /*kolor kursora*/
+    caret-color: #FF4500; /*kolor kursora*/
     
     box-shadow:0px 3px 20px rgba(1,0,0,0.7);
 }
-
-.icon-user
+h1
 {
-    position: absolute;
-    padding:0;
-    margin:0;
-    font-size:50px;
-    text-shadow:2px 2px rgba(1,0,0,0.69);
-    width:1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:100px;
-    height:100px;
-    top:-50px;
-    background-image: linear-gradient(to bottom,aliceblue, rgba(0,0,0,0.9));
-    border-radius:50%;
-    left: calc(50% - 50px);
-    box-shadow: 0px -5px 7px rgba(1,0,0,0.69);  
-    
- 
+    text-align:center;
+    margin-bottom: 35px;
+    padding:15px;
+    font-size:40px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.72);
 }
 
-form legend
-{
-
-    font-size:45px;
-    text-align: center;
-    margin:0;
-    padding: 0;
-    
-    
-    
-}
 
 #loginbox p
 {
@@ -72,13 +47,14 @@ form legend
     text-shadow: 2px 2px rgba(1,0,0,0.69);
 }
 
-#loginbox input
+#loginbox input[type='text'],
+#loginbox input[type='email']
 {
     width:100%;
     margin-bottom:5%;
 }
 
-#loginbox input[type='text'], input[type='password']
+#loginbox input[type='text'], input[type='email']
 {
     background-color: transparent;
     border-color: transparent;
@@ -88,7 +64,8 @@ form legend
     outline:none;
     transition: .4s ease;
 }
-#loginbox input[type='text']:focus, input[type='password']:focus 
+#loginbox input[type='text']:focus, 
+input[type='email']:focus 
 {
     background-color: transparent;
     border-color: transparent;
@@ -98,19 +75,106 @@ form legend
     outline:none;
 }
 
+section.gender
+{
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin:5px;
+    padding: 3px;
+    width:100%;
+    height: 100px;
+    border-top:0px;
+}
+section.gender label
+{
+    position: relative;
+    box-sizing: border-box;
+    top:0;
+    left:0;
+    width:100%;
+    height:25%;
+    margin:5px;
+    padding: 5px;
+    letter-spacing: .8px;
+}
+section:hover input ~ .checkmark
+{
+    background-color: #ccc;
+}
+section.gender label span.genderText
+{
+    position: absolute;
+    cursor: pointer;
+    width:calc(100% - 25px);
+}
+section.gender label span.checkmark,
+section.gender label input[type="checkbox"]
+{
+    position: absolute;
+    cursor: pointer;
+    right:0;
+    top:0;
+    margin-top:6px;
+    width:25px;
+    height: 25px;
+    background-color:rgba(256,69,0,0);
+    border:2px solid rgba(256,69,0,0.5);
+    box-shadow:0px 0px 5px rgba(0,0,0,0.32);
+    border-radius: 3px;
+}
+section.gender label input[type="checkbox"]
+{
+    opacity: 0;
+}
+section.gender input:checked ~ .checkmark
+{
+    background-color:rgba(256,69,0,0);
+}
+
+section.gender label span.checkmark::after
+{
+    content:'';
+    position: absolute;
+    display: none;
+    left:9px;
+    top:5px;
+    width:5px;
+    height:10px;
+    border: solid #fff;
+    border-width:0 3px 3px 0;
+    transform: rotate(45deg);
+    filter:drop-shadow(0 0 3px #fff);
+}
+
+section.gender label input:checked ~ .checkmark::after,
+section.gender label input:hover ~ .checkmark::after
+{
+    display: block;
+}
+
 #loginbox input[type='submit']
 {
     box-sizing: border-box;
+    position: absolute;
     border:none;
     outline:none;
     height: 50px;
-    margin-top:30px;
-    margin-bottom: 30px;
+    width:100%;
+    left:0;
+    bottom:0;
+    margin-bottom: 15px;
     font-size:30px;
     transition:.4s ease-out;
     border-radius:5px;
-    color:orangered;
+    color:aliceblue;
+    text-shadow: 2px 2px 10px rgba(0,0,0);
     background-color: transparent;
+    box-shadow:0px 4px 5px orangered;
     /*font gradient*/
     /*text-shadow: 2px 2px rgba(1,0,0,0.2);
       background: -webkit-linear-gradient(aliceblue,silver);
@@ -123,7 +187,7 @@ form legend
 {
 
     cursor:pointer;
-     box-shadow:0px 4px 5px orangered;
+    text-shadow: 2px 2px 5px rgba(0,0,0);
 }
 
 
