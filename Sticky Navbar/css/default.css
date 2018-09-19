@@ -41,6 +41,7 @@ nav.black .log
 {
     
     color:#fff;
+    
 }
 
 nav ul
@@ -97,6 +98,7 @@ nav.black ul li span a.active:hover
 {
     
     box-shadow:2px 2px 5px aliceblue;
+    
 }
 
 nav ul li a:focus
@@ -109,6 +111,7 @@ nav ul li span a.active
     background: #E2472F;
     color:#fff;
     border-radius:50%;
+    box-shadow: 2px 2px 5px #000;
 }
 
 
