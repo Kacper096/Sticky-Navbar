@@ -22,9 +22,10 @@ function(){
         }
     })
     
-    $(".navi",this).on(
+   $(".navi",this).on(
         {
             click: function(){
+                
             if( $(".navi").hasClass("active"))
                 {
                     $(".navi").removeClass("active");
@@ -32,4 +33,5 @@ function(){
             $(this).toggleClass("active");
         }
     })
+   
 })
