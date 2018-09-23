@@ -6,14 +6,15 @@ window.onload = function()
 
 /*Pobieram modalny box*/
 var modal = document.getElementById('modal');
-
 /*Pobieram buttona logowania*/
 var login = document.getElementById('login');
 
 /*Pobieram spana do zamkniecia modala*/
 var span = document.getElementsByClassName('close')[0];
 
+/*Pobieram, aby później usunąć klasę active*/
 var navi = document.getElementsByClassName('navi');
+
 
 login.addEventListener("mousedown",function(){
     currentNavi = actActive();
@@ -26,6 +27,7 @@ login.onclick = function() {
 
 /*Gdy wcisniemy krzyzyk*/
 span.onclick = function() {
+    createDownArrow();
     modal.style.display = "none";
     navi[navi.length - 1].classList.remove("active");
     currentNavi.classList.add('active');
@@ -35,6 +37,7 @@ span.onclick = function() {
 window.onclick = function(event) {
     if(event.target == modal)
         {
+            createDownArrow();
             navi[navi.length - 1].classList.remove("active");
             modal.style.display = "none";
             currentNavi.classList.add('active');
@@ -58,5 +61,20 @@ function actActive()
                    break;
                }
         }
+}
+
+/*Funkcja tworzenia obiektu downArrow*/
+function createDownArrow()
+{
+    /*Pobieram downArrow, aby go pojawić kiedy zamknę modal-box'a*/
+    var downArrow = document.getElementsByClassName('downArrow');
+    
+    if(!(downArrow.length))
+    {
+        const element = document.createElement('span');
+        element.classList.add('downArrow');
+        document.querySelector('body').appendChild(element);
+    }
+    
 }
 
