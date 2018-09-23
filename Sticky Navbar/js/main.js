@@ -21,16 +21,30 @@ function(){
             $(".social").animate({left:-240+'px'})
         }
     })
-    
    $(".navi",this).on(
         {
-            click: function(){
+            click: function(event){
+            
+             if(event.target == document.getElementById('login'))
+                 $('span.downArrow').fadeOut(1000,"swing",
+                     function()
+                    {
+                     $(this).remove();
+                    });
                 
-            if( $(".navi").hasClass("active"))
-                {
-                    $(".navi").removeClass("active");
-                }
+             if( !($("span.downArrow").length) && 
+                (event.target != document.getElementById('login')))
+                 {
+                     $(document.body).append($('<span>',{class: 'downArrow'}));
+                 
+                 }
+             if( $(".navi").hasClass("active"))
+                 {
+                     $(".navi").removeClass("active");
+                 }
+                
             $(this).toggleClass("active");
+        
         }
     })
    

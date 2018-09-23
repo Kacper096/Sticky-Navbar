@@ -260,3 +260,31 @@ a:hover .icon-gplus
     color:rgb(219,68,55);
     
 }
+
+.downArrow {
+    position: fixed;
+    display: flex;
+    color:#F0F8FF;
+    bottom:10px;
+    right:10px;
+    width:5vmin;
+    height:5vmin;
+    background: rgba(256,69,0,0.8);
+    background-attachment: fixed;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
+    text-align: center;
+    transform: rotate(90deg);
+}
+.downArrow::after
+{
+    content: "\279C";
+}
+.downArrow:hover
+{
+    cursor:pointer;
+    background-color:rgba(256,69,0,1);
+    text-shadow: 0px 0px 5px #FFF;
+}
