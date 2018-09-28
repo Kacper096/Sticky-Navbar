@@ -18,12 +18,11 @@ var navi = document.getElementsByClassName('navi');
 var downArrow = document.getElementsByClassName('downArrow');
 
 var arrow = isAlive(downArrow);
-    
+
+/*Gdy najedziemy na login sprawdzamy czy jest aktualna klasa active*/
 login.addEventListener("mousedown",function(){
     currentNavi = actActive();
-    
     arrow = isAlive(downArrow);
-    
 })
 /*Gdy klikniemy zaloguj pojawi się modal*/
 login.onclick = function() {
@@ -43,7 +42,6 @@ span.onclick = function() {
 window.onclick = function(event) {
     if(event.target == modal)
         {
-            ;
             createDownArrow(arrow);
             navi[navi.length - 1].classList.remove("active");
             modal.style.display = "none";
@@ -69,7 +67,7 @@ function actActive()
                }
         }
 }
-/*Funckja sprawdza czy obiekt downArrow istniał*/
+/*Funkcja sprawdza czy obiekt downArrow istniał*/
 function isAlive(elementArr)
 {
     if(elementArr.length)

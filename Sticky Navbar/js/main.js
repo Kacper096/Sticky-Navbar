@@ -21,22 +21,22 @@ function(){
             $(".social").animate({left:-240+'px'})
         }
     })
+    
    $(".navi",this).on(
         {
             click: function(event){
-            
+            /*Usuwamy obiekt downArrow*/
              if(event.target == document.getElementById('login'))
                  $('span.downArrow').fadeOut(1000,"swing",
                      function()
                     {
                      $(this).remove();
                     });
-                
+                /*Tworzymy obiekt downArrow*/
              if( !($("span.downArrow").length) && 
                 (event.target != document.getElementById('login')))
                  {
-                     $(document.body).append($('<span>',{class: 'downArrow'}));
-                 
+                   $(document.body).append($('<span>',{class: 'downArrow'}).append($('<a>',{href: '#content'})));
                  }
              if( $(".navi").hasClass("active"))
                  {
@@ -44,8 +44,10 @@ function(){
                  }
                 
             $(this).toggleClass("active");
-        
         }
     })
    
 })
+
+
+        
